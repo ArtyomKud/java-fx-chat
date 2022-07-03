@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.javafxchat.Client.JavaChatController">
+    <AnchorPane>
+        <padding>
+            <Insets bottom="20.0"/>
+        </padding>
+    </AnchorPane>
+
+    <HBox fx:id="authBox" visible="true">
+        <TextField fx:id="login" promptText="login" AnchorPane.leftAnchor="0"/>
+        <TextField fx:id="password" promptText="password" AnchorPane.leftAnchor="40"/>
+        <Button text="Авторизоваться" onAction="#ButtonClickAuth" AnchorPane.leftAnchor="60"/>
+    </HBox>
+
+    <AnchorPane fx:id="msgBox" visible="false">
+    <Button text="Отпр."  onAction="#ButtonClickSendText" AnchorPane.bottomAnchor="0.0"  AnchorPane.rightAnchor="0.0"/>
+        <TextArea fx:id="mainTextArea" editable="false" wrapText="true" AnchorPane.topAnchor="0"
+                  AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.bottomAnchor="30"/>
+        <TextField fx:id="mainTextField" focusTraversable="true" onAction="#ButtonClickSendText"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="60" AnchorPane.leftAnchor="0.0"/>
+    </AnchorPane>
+
+
+</AnchorPane>
